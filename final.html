@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,6 +9,12 @@
 
 <title>Forever ❤️</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -15,6 +22,8 @@
 <body>
 
 <div class="background"></div>
+
+<div class="particles"></div>
 
 <div class="floating-hearts">
 
@@ -27,23 +36,53 @@
 
 </div>
 
-<div class="final-card">
+<section class="final-wrapper">
 
-<h1>❤️ Happy Girlfriend's Day ❤️</h1>
+<div class="final-card reveal">
+
+<h1 class="glow">
+
+Happy Girlfriend's Day ❤️
+
+</h1>
+
+<div class="divider"></div>
 
 <h2>
-Thank you for being part of my life.
+
+No matter where life takes us...
+
+I hope we always find our way back to each other.
+
 </h2>
 
 <p class="final-message">
 
-Every moment with you is a memory I never want to lose.
+Thank you...
 
-I don't know what tomorrow holds,
+For every smile.
 
-but I know I want you beside me while I find out.
+For every laugh.
 
-Thank you for everything.
+For every memory.
+
+For every late-night conversation.
+
+For every moment you unknowingly made my day better.
+
+You came into my life and changed it in ways I'll always be grateful for.
+
+I don't know what tomorrow looks like,
+
+but if you're in it,
+
+I know it'll be worth looking forward to.
+
+Happy Girlfriend's Day.
+
+I love you.
+
+Forever.
 
 ❤️
 
@@ -51,15 +90,33 @@ Thank you for everything.
 
 <div class="counter">
 
-<h3>Our Journey Since</h3>
+<h3>
 
-<p>28 July 2026</p>
+Our Journey
 
-<div id="timer"></div>
+</h3>
+
+<p>
+
+Started on
+
+<strong>28 July 2026</strong>
+
+</p>
+
+<div id="timer">
+
+Loading...
 
 </div>
 
-<button onclick="location.href='index.html'">
+</div>
+
+<div class="divider"></div>
+
+<button
+class="pulse"
+onclick="replayStory()">
 
 Replay Our Story ❤️
 
@@ -67,49 +124,15 @@ Replay Our Story ❤️
 
 </div>
 
-<script>
+<div class="footer">
 
-const startDate=new Date("2026-07-28T00:00:00");
+Made with ❤️ especially for you.
 
-function updateTimer(){
+</div>
 
-const now=new Date();
+</section>
 
-let diff=now-startDate;
-
-if(diff<0){
-
-document.getElementById("timer").innerHTML="Our story begins soon ❤️";
-
-return;
-
-}
-
-const days=Math.floor(diff/(1000*60*60*24));
-
-const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-
-const minutes=Math.floor((diff%(1000*60*60))/60000);
-
-const seconds=Math.floor((diff%(60000))/1000);
-
-document.getElementById("timer").innerHTML=
-
-`${days} Days<br>
-
-${hours} Hours<br>
-
-${minutes} Minutes<br>
-
-${seconds} Seconds`;
-
-}
-
-updateTimer();
-
-setInterval(updateTimer,1000);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 

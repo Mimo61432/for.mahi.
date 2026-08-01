@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Letter ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="letter-card">
+
+<h1>💌 A Letter For You</h1>
+
+<p id="typing"></p>
+
+<button id="nextBtn" onclick="location.href='timeline.html'" style="display:none;">
+Our Journey →
+</button>
+
+</div>
+
+<script>
+
+const message=`Happy Girlfriend's Day ❤️
+
+There are people who simply become part of life...
+and then there are people who become the reason life feels brighter.
+
+You are that person for me.
+
+Thank you for every smile,
+every conversation,
+every laugh,
+and every moment we've shared.
+
+No matter what tomorrow brings,
+I hope we continue creating beautiful memories together.
+
+You mean more to me than words can ever truly express.
+
+Happy Girlfriend's Day.
+
+❤️`;
+
+const target=document.getElementById("typing");
+
+let i=0;
+
+function type(){
+
+if(i<message.length){
+
+target.innerHTML+=message.charAt(i);
+
+i++;
+
+setTimeout(type,35);
+
+}else{
+
+document.getElementById("nextBtn").style.display="inline-block";
+
+}
+
+}
+
+type();
+
+</script>
+
+</body>
+</html>

@@ -1,78 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>My Letter ❤️</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="background"></div>
 
-<div class="letter-card">
+<div class="particles"></div>
 
-<h1>💌 A Letter For You</h1>
+<div class="floating-hearts">
+
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+
+</div>
+
+<section class="letter-section">
+
+<div class="letter-card reveal">
+
+<div class="envelope">
+
+💌
+
+</div>
+
+<h1>
+
+A Letter For You
+
+</h1>
+
+<div class="divider"></div>
 
 <p id="typing"></p>
 
-<button id="nextBtn" onclick="location.href='timeline.html'" style="display:none;">
-Our Journey →
+<button
+id="nextBtn"
+style="display:none;"
+onclick="fadeTo('timeline.html')">
+
+Continue Our Journey →
+
 </button>
 
 </div>
 
+</section>
+
+<script src="script.js"></script>
+
 <script>
 
-const message=`Happy Girlfriend's Day ❤️
+const letter=`Happy Girlfriend's Day ❤️
 
-There are people who simply become part of life...
-and then there are people who become the reason life feels brighter.
+Sometimes I wonder how life would have looked if our paths had never crossed.
 
-You are that person for me.
+Then I stop thinking about it...
 
-Thank you for every smile,
-every conversation,
-every laugh,
-and every moment we've shared.
+Because I don't want to imagine a world where I never met you.
 
-No matter what tomorrow brings,
-I hope we continue creating beautiful memories together.
+Thank you for every smile that made difficult days easier.
 
-You mean more to me than words can ever truly express.
+Thank you for every laugh that became one of my favorite memories.
+
+Thank you for being patient,
+kind,
+caring,
+and wonderfully yourself.
+
+You inspire me to become a better person every single day.
+
+I know life won't always be perfect.
+
+We'll have busy days.
+
+We'll have misunderstandings.
+
+We'll have moments that test us.
+
+But if there's one thing I'll always choose...
+
+I'll choose us.
+
+No matter where life takes us,
+I hope we continue collecting beautiful memories together.
 
 Happy Girlfriend's Day.
 
 ❤️`;
 
-const target=document.getElementById("typing");
+startTyping(letter,"typing",28);
 
-let i=0;
-
-function type(){
-
-if(i<message.length){
-
-target.innerHTML+=message.charAt(i);
-
-i++;
-
-setTimeout(type,35);
-
-}else{
+setTimeout(()=>{
 
 document.getElementById("nextBtn").style.display="inline-block";
 
-}
-
-}
-
-type();
+},letter.length*28+800);
 
 </script>
 
 </body>
+
 </html>

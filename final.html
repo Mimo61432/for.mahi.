@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forever ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="floating-hearts">
+
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+
+</div>
+
+<div class="final-card">
+
+<h1>❤️ Happy Girlfriend's Day ❤️</h1>
+
+<h2>
+Thank you for being part of my life.
+</h2>
+
+<p class="final-message">
+
+Every moment with you is a memory I never want to lose.
+
+I don't know what tomorrow holds,
+
+but I know I want you beside me while I find out.
+
+Thank you for everything.
+
+❤️
+
+</p>
+
+<div class="counter">
+
+<h3>Our Journey Since</h3>
+
+<p>28 July 2026</p>
+
+<div id="timer"></div>
+
+</div>
+
+<button onclick="location.href='index.html'">
+
+Replay Our Story ❤️
+
+</button>
+
+</div>
+
+<script>
+
+const startDate=new Date("2026-07-28T00:00:00");
+
+function updateTimer(){
+
+const now=new Date();
+
+let diff=now-startDate;
+
+if(diff<0){
+
+document.getElementById("timer").innerHTML="Our story begins soon ❤️";
+
+return;
+
+}
+
+const days=Math.floor(diff/(1000*60*60*24));
+
+const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+const minutes=Math.floor((diff%(1000*60*60))/60000);
+
+const seconds=Math.floor((diff%(60000))/1000);
+
+document.getElementById("timer").innerHTML=
+
+`${days} Days<br>
+
+${hours} Hours<br>
+
+${minutes} Minutes<br>
+
+${seconds} Seconds`;
+
+}
+
+updateTimer();
+
+setInterval(updateTimer,1000);
+
+</script>
+
+</body>
+
+</html>

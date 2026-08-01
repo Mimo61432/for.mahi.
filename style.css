@@ -1659,3 +1659,79 @@ width:auto;
 padding:18px 55px;
 
 }
+
+/* LETTER PAGE */
+
+.letter-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:60px 20px;
+
+}
+
+.letter-card{
+
+width:90%;
+
+max-width:900px;
+
+margin:70px auto;
+
+padding:55px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(25px);
+
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.envelope{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+animation:floatAnimation 3s ease-in-out infinite;
+
+}
+
+#typing{
+
+white-space:pre-wrap;
+
+font-size:18px;
+
+line-height:2;
+
+text-align:left;
+
+margin-top:20px;
+
+min-height:420px;
+
+}
+
+#nextBtn{
+
+display:block;
+
+margin:45px auto 0;
+
+width:auto;
+
+padding:18px 48px;
+
+}

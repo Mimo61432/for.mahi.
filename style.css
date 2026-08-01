@@ -1597,3 +1597,65 @@ animation-delay:.15s;
 animation-delay:.3s;
 
 }
+
+/* FINAL PAGE */
+
+.final-wrapper{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:60px 20px;
+
+}
+
+.final-card{
+
+animation:fadeIn 1.2s ease;
+
+}
+
+.counter{
+
+border:1px solid rgba(212,175,55,.25);
+
+box-shadow:
+
+0 0 30px rgba(212,175,55,.15);
+
+}
+
+.counter strong{
+
+color:var(--gold);
+
+}
+
+.footer{
+
+margin-top:50px;
+
+font-size:14px;
+
+opacity:.65;
+
+letter-spacing:1px;
+
+text-align:center;
+
+}
+
+.final-card button{
+
+width:auto;
+
+padding:18px 55px;
+
+}
